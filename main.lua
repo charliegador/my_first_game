@@ -20,6 +20,7 @@ love.update = function (dt)
     if y > bounceFloor and x > platformX and x < (platformX + 80) then
         directionY = -1
         gravity = gravity + 50
+        directionX = directionX * 2
     elseif y < 0  then
         directionY = 1
     end
