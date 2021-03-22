@@ -5,6 +5,7 @@ platformY = 550
 bounceFloor = platformY-10
 directionY = 1
 directionX = -1
+gravity = 200
 
 love.draw = function ()
     love.graphics.circle("fill", x, y, 10)
@@ -18,6 +19,7 @@ love.update = function (dt)
     -- Bounce off platform
     if y > bounceFloor and x > platformX and x < (platformX + 80) then
         directionY = -1
+        gravity = gravity + 50
     elseif y < 0  then
         directionY = 1
     end
@@ -38,7 +40,7 @@ love.update = function (dt)
 
     -- Update ball position
     x = x + 100 * directionX * dt
-    y = y + 400 * directionY * dt
+    y = y + gravity * directionY * dt
     
 end
 
