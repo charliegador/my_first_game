@@ -109,6 +109,10 @@ gameoverDraw = function ()
     love.graphics.print("Exit", 375, 267, 0, 2)
     love.graphics.setColor(255, 0, 0, 1)
     love.graphics.print("GAME OVER!", 290, 150, 0, 3)
+    love.graphics.setColor(0, 255, 0, 1)
+    love.graphics.print("Your Score: ", 10, 10, 0, 2)
+    love.graphics.print(score, 160, 10, 0, 2)
+
 end
 
 
